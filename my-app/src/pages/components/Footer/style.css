@@ -19,3 +19,18 @@ a{
     border-radius: 15px;
 }
 
+@media (min-width: 740px) {
+    .footer--container{
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+}
+.footer--image{
+    max-width: 50%;
+    border-radius: 15px;
+}
+.contact{
+    margin-right: 25px;
+}
+}
