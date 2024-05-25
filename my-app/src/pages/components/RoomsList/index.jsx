@@ -1,29 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Room } from '../Room';
 import './style.css';
+import { RoomDetail } from '../RoomDetail';
 
-export const RoomsList = () => {
-  const [selected, setSelected] = useState(null);
-  const [rooms, setRooms] = useState([]);
-
-  const handleClick = (value) => {
-    setSelected(value);
-    console.log(value);
-  };
-
-  useEffect(() => {
-    const fetchRooms = async () => {
-      const response = await fetch('http://localhost:4000/api/rooms');
-      const json = await response.json();
-      setRooms(json.data);
-    };
-
-    fetchRooms();
-  }, []);
-
-  if (rooms === null) {
-    return <p>Loading...</p>;
-  }
+export const RoomsList = ({ rooms, selectedId, onSelect }) => {
   return (
     <div className="rooms--container">
       <div className="rooms--content">
@@ -38,7 +18,7 @@ export const RoomsList = () => {
             name={room.name}
             price={room.price}
             image={`http://ocalhost:4000/assets/${room.image}`}
-            onClick={handleClick}
+            onSelect={onSelect}
           />
         ))}
       </div>
