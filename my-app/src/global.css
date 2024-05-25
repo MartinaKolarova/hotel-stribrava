@@ -4,12 +4,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   font-family: 'Open Sans', sans-serif;
-}
-
-.container {
-  max-width: 26rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0;
 }
