@@ -1,0 +1,21 @@
+.footer--container{
+    background-color: #131E2A;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 40px;
+}
+
+.contact{
+    margin-bottom: 25px;
+}
+
+a{
+    color: white;
+}
+
+.footer--image{
+    border-radius: 15px;
+}
+
